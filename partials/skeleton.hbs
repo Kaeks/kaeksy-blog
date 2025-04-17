@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+    	<meta charset="UTF-8"/>
+    	<link rel="icon" type="image/gif" href="/img/dumpy.gif"/>
+    	<link rel="stylesheet" href="/style/main.css"/>
+    	<link rel="stylesheet" href="/style/xp.css"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    	<title>Bunny site{{title}}</title>
+		{{> head }}
+  	</head>
+  	<body>
+    	<audio id="test-sound-player"><source src="/audio/start.mp3"></audio>
+    	<div id="popup-container">
+			{{> popup }}
+		</div>
+    	<div id="fly" class="hidden">
+			{{> flying }}
+		</div>
+    	<div id="container">
+      		<div id="page">
+{{> header }}
+        		<div id="content">
+          			{{> content }}
+        		</div>
+      		</div>
+      		{{> footer }}
+    	</div>
+  	</body>
+	<script>0</script>
+	{{> after-content }}
+</html>

@@ -1,0 +1,23 @@
+<div id="sound-consent" class="xp-window hidden">
+    <div class="xp-window-title">
+        <span>Autoplay</span>
+        <div class="xp-window-nav">
+            <button class="xp-window-nav-button xp-window-close" onclick="console.log('awaa manww')">X</button>
+        </div>
+    </div>
+    <div class="xp-window-content dialog">
+        <div class="xp-window-content-image"><img src="/img/xp_warning.png"/></div>
+        <div class="xp-window-content-text">
+            I would like to play you some sounds on this site.<br>
+            These may get blocked by your browser's autoplay blocker.<br>
+            Please play the following audio to allow autoplay features.
+        </div>
+        <div class="xp-dialog-button-container">
+            <audio id="sound-consent-player">
+                <source src="/audio/tada.mp3"/>
+            </audio>
+            <button id="sound-consent-tada" class="xp-dialog-button">Tada!</button>
+            <button id="sound-consent-done" class="xp-dialog-button">Done</button>
+        </div>
+    </div>
+</div>
