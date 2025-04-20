@@ -140,7 +140,18 @@ span.cmd::before {
 .cool-box > h1 {
 	margin: 0;
 	padding: 0;
-	text-shadow: -2px 2px #111;
+	font-weight: bold;
+	color: #bbb;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
+.cool-box > h1::before {
+	content: "/* ";
+}
+
+.cool-box > h1::after {
+	content: " */";
 }
 
 #fly-container {

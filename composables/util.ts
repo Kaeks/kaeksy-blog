@@ -7,11 +7,9 @@ export const useRandom = () => {
     const getRandom = () => Math.random();
     const getRandomInRange = (min=0, max=1) => min + (max - min) * getRandom();
     const getRandomIntInRange = (min=0, max=1) => {
-        if (min != Math.floor(min) || max != Math.floor(max)) {
-            console.error(`Numbers min=${min} and max=${max} should be integers.`);
-        }
-        let num = getRandomInRange(min, max);
-        return Math.round(num);
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     };
     return { getRandom, getRandomInRange, getRandomIntInRange };
 }
