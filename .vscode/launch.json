@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "client: firefox",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "profile": "vscode-dev",
+            "pathMappings": [
+                {
+                    "url": "http://localhost:3000/_nuxt/components",
+                    "path": "${workspaceFolder}/components"
+                }
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "server: nuxt",
+            "outputCapture": "std",
+            "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.mjs",
+            "args": [
+                "dev"
+            ]
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run Script: dev",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "fullstack: nuxt",
+            "configurations": [
+                "server: nuxt",
+                "client: firefox"
+            ]
+        }
+    ]
+}

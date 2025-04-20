@@ -1,18 +1,19 @@
 {
-  "name": "kaeksy-blog",
+  "name": "nuxt-app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^6.2.0"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "glob": "^11.0.1",
-    "vite-plugin-handlebars": "^2.0.0"
+    "@pinia/nuxt": "^0.11.0",
+    "nuxt": "^3.16.2",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   }
 }

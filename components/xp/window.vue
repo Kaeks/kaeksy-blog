@@ -1,3 +1,20 @@
+<script setup>
+import ProgressBar from "./progress-bar.vue";
+</script>
+<template>
+<div class="xp-window">
+    <div class="xp-window-title">
+        <span><slot name="title"/></span>
+        <div class="xp-window-nav">
+    	    <button class="xp-window-nav-button xp-window-close" onclick="console.log('ARGGGG')">X</button>
+        </div>
+    </div>
+    <div class="xp-window-content vertical">
+        <slot name="content"/>
+    </div>
+</div>
+</template>
+<style>
 .xp-window {
     background: linear-gradient(135deg, #0053e1, #0036aa);
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
@@ -25,38 +42,6 @@
     inset 0 -6px 5px -5px #ffffff4d;
     justify-content: space-between;
     gap: 20px;
-}
-
-.xp-file-transfer {
-    width: 256px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.xp-file {
-    position: absolute;
-    animation: xp-file steps(21) 2s infinite;
-}
-
-.xp-file-sprite {
-    width: 32px;
-    height: 32px;
-    background: url("../img/xp file.png") 0 0 no-repeat;
-    background-size: 2200%;
-    image-rendering: crisp-edges;
-    animation: xp-file-sprite steps(21, jump-none) 2s infinite;
-}
-
-@keyframes xp-file-sprite {
-    0% {background-position: 0%;} 100% {background-position: 100%;}
-}
-
-@keyframes xp-file {
-    0% {left: 24px; top: 13px;}
-    25% {top: 3px;}
-    50% {top: 0px;}
-    75% {top: 3px;}
-    100% {left: 248px; top: 13px;}
 }
 
 .xp-window-content {
@@ -97,10 +82,6 @@
 
 .xp-window-content-image > img {
     width: 32px; height: 32px;
-}
-
-.xp-window-nav {
-    
 }
 
 .xp-window-nav-button {
@@ -150,36 +131,4 @@
 .xp-dialog-button:active {
     box-shadow: inset 2px 2px 2px 0px #0000004f, inset -2px -2px 2px 0px #00000001;
 }
-
-:root {
-    --progress-bar-segment-size: 8px;
-    --progress-bar-padding: 4px;
-    --progress-bar-segment-gap: 2px;
-}
-
-.xp-progress-bar {
-    width: 100%;
-    height: 18px;
-    background: white;
-    border: 1px solid #444;
-    box-shadow: inset 1px 1px 1px 0px #0000004f, inset -1px -1px 1px 0px #0000001f;
-    border-radius: 4px;
-    display: flex;
-    padding: var(--progress-bar-padding);
-}
-
-.xp-progress-bar-fill {
-    height: var(--progress-bar-segment-size);
-    background: repeating-linear-gradient(
-    90deg, 
-    #3d892e,
-    #3d892e var(--progress-bar-segment-size),
-    #00000000 var(--progress-bar-segment-size),
-    #00000000 calc(var(--progress-bar-segment-size) + var(--progress-bar-segment-gap))
-    );
-}
-
-@keyframes progress-bar {
-    from {width: 0%;}
-    to {width: 100%;}
-}
+</style>
