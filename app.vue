@@ -137,6 +137,12 @@ span.cmd::before {
 	padding: 10px;
 }
 
+.cool-box > h1 {
+	margin: 0;
+	padding: 0;
+	text-shadow: -2px 2px #111;
+}
+
 #fly-container {
 	position: fixed;
 	display: flex;
