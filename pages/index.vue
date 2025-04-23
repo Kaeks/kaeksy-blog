@@ -34,7 +34,7 @@ onNuxtReady(() => {
         <h1>linques</h1>
         <div class="link"><a href="http://lexie.land">❤️ wife ❤️</a></div>
         <div class="link"><a href="blog">Blog</a></div>
-        <div class="link"><a href="">poopy</a></div>
+        <div class="link"><a href="bookmarks">Bookmarks</a></div>
         <div class="link"><a href="">pee</a></div>
     </div>
 </template>
