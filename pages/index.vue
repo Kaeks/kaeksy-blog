@@ -27,7 +27,7 @@ onNuxtReady(() => {
             <h1>whuh?</h1>
             hi, i am jana.<br>
             i don't really know what to put in a little bio like this.<br><br>
-            check out my blog -->
+            check out my blog --&gt;
         </div>
     </div>
     <div id="linques" class="cool-box">
